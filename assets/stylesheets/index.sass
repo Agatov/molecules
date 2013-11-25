@@ -1,0 +1,398 @@
+@import 'bourbon/bourbon'
+
+@font-face
+  font-family: 'ProximaNovaCond-Bold'
+  src: url('/fonts/ProximaNovaCond-Bold.otf') format("opentype")
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'ProximaNova-Reg'
+  src: url('/fonts/ProximaNova-Reg.otf') format("opentype")
+  font-weight: normal
+  font-style: normal
+
+body
+  padding: 0px
+  margin: 0px
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
+  background: #fff
+
+
+h1
+  font-size: 32px
+  margin-bottom: 20px
+
+h2
+  font-size: 24px
+  margin-bottom: 20px
+
+p
+  font-size: 16px
+  line-height: 1.4
+  margin-bottom: 20px
+
+.wrapper
+  width: 960px
+  margin: 0px auto
+
+
+.header
+  width: 100%
+  height: 100px
+  background: #262626
+
+  .logo
+  .phone
+    float: right
+    font-size: 24px
+    color: #fff
+    line-height: 100px
+
+.intro
+  width: 960px
+  height: 594px
+  margin: 0px auto
+  background: url('/images/intro.png') no-repeat
+  background-size: 100%
+
+  .description
+    font-size: 40px
+    font-weight: 200
+    color: #000
+    line-height: 1.3
+    padding-top: 170px
+    width: 500px
+
+
+.form
+  width: 960px
+  height: 170px
+  margin: 0px auto
+  @include linear-gradient(top, #f7f7f5, #e5e5e3)
+
+  &.orange
+    @include linear-gradient(top, #f69656, #ec6d46)
+    color: #fff
+
+  .call-to-action
+    font-size: 20px
+    text-align: center
+    padding-top: 45px
+
+  .form-body
+    padding: 30px 0
+    input
+      width: 190px
+      height: 45px
+      margin-right: 30px
+      font-size: 15px
+      padding: 0 10px
+      border: 1px solid #b2b2b2
+
+    button
+      width: 220px
+      height: 45px
+      @include linear-gradient(top, #746757, #332d26)
+      color: #fff
+      font-weight: bold
+      font-size: 17px
+      border: none
+      cursor: pointer
+
+      &:hover
+        @include linear-gradient(top, #332d26, #746757)
+
+
+.bracket
+  width: 960px
+  height: 60px
+  margin-top: 20px
+  background: url('/images/bracket.png')
+
+.title
+  text-align: center
+  font-size: 36px
+  font-weight: 200
+  padding-bottom: 50px
+
+
+.schema
+  margin: 50px auto
+
+  .schema-row
+    padding: 30px 0
+    &:after
+      clear: both
+      content: "."
+      display: block
+      height: 0
+      clear: both
+      visibility: hidden
+
+    .arrow
+      float: left
+      width: 185px
+      height: 80px
+      margin-top: 50px
+      margin-right: 15px
+      color: #fff
+      line-height: 1.3
+      text-align: center
+      padding: 0 15px
+      padding-top: 35px
+
+
+      &.red
+        background: url('/images/red_arrow.png')
+
+      &.green
+        background: url('/images/green_arrow.png')
+
+    .icon-area
+      float: left
+      width: 115px
+      height: 200px
+
+      .price
+        width: 100px
+        height: 30px
+        margin-bottom: 20px
+        font-size: 14px
+        font-weight: bold
+        text-align: center
+        line-height: 30px
+        position: relative
+
+        &:after
+          content: ""
+          position: absolute
+          bottom: -10px
+          left: 45px
+          border-width: 10px 10px 0px 10px
+          border-style: solid
+
+        &.gray
+          @include linear-gradient(top, #f7f7f5, #e5e5e3)
+          color: #262626
+
+          &:after
+            border-color: #e5e5e3 transparent
+
+        &.orange
+          @include linear-gradient(top, #f69656, #ec6d46)
+          color: #fff
+
+          &:after
+            border-color: #ec6d46 transparent
+
+        &.red
+          @include linear-gradient(top, #ed3434, #b92929)
+          color: #fff
+
+          &:after
+            border-color: #b92929 transparent
+
+
+        &.green
+          @include linear-gradient(top, #a7ce36, #5c9011)
+          color: #fff
+
+          &:after
+            border-color: #5c9011 transparent
+
+
+
+      .icon
+        width: 115px
+        height: 115px
+
+      .icon-text
+        padding-top: 10px
+        text-align: center
+        font-size: 14px
+        color: #262626
+        line-height: 1.4
+
+    .icon-space
+      float: left
+      width: 38px
+      height: 115px
+
+      .icon-plus
+        margin-top: 95px
+        margin-left: 6px
+        width: 25px
+        height: 25px
+        background: url('/images/plus.png')
+
+      .icon-equal-sign
+        margin-top: 95px
+        margin-left: 6px
+        width: 25px
+        height: 25px
+        background: url('/images/equal_sign.png')
+
+
+
+
+.attention
+  position: relative
+  width: 960px
+  padding: 15px 0
+  margin: 0px auto
+  @include linear-gradient(top, #f69656, #ec6d46)
+  font-size: 30px
+  font-weight: 200
+  line-height: 1.5
+  text-align: center
+  color: #fff
+
+  &:after
+    content: ""
+    position: absolute
+    bottom: -20px
+    left: 470px
+    border-width: 20px 20px 0px 20px
+    border-style: solid
+    border-color: #ec6d46 transparent
+
+  strong
+    font-weight: bold
+
+
+.triggers
+  margin: 50px 0
+  padding: 25px 0
+
+  &:after
+    clear: both
+    content: "."
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
+
+  .trigger
+    float: left
+    width: 135px
+    height: 150px
+    margin: 0 50px
+
+    .text
+      padding-top: 15px
+      color: #262626
+      font-size: 16px
+      font-weight: 200
+      line-height: 1.4
+      text-align: center
+
+
+.policy
+  padding-top: 150px
+  text-align: center
+
+  a
+    color: #262626
+
+
+.action
+  padding: 50px 0
+  width: 720px
+  margin: 0px auto
+  &:after
+    clear: both
+    content: "."
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
+
+
+  .bottle
+    float: left
+    width: 110px
+    height: 130px
+
+    .cost
+      height: 30px
+      line-height: 1.4
+      font-size: 14px
+      text-align: center
+
+      .red
+        text-decoration: line-through
+        color: red
+
+
+  .sign
+    float: left
+    padding: 50px 25px
+
+
+.action-desc
+  margin-top: 50px
+  font-size: 20px
+  color: #262626
+  text-align: center
+
+
+.timer
+  width: 500px
+  margin: 0px auto
+  padding: 50px 0
+
+  &:after
+    clear: both
+    content: "."
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
+
+  .timer-title
+    float: left
+    width: 170px
+    height: 50px
+    background: #fff
+    color: #ed7248
+    text-align: right
+    line-height: 1.4
+    font-size: 20px
+    font-weight: bold
+    padding-right: 40px
+
+  .timer-timer
+    float: left
+
+    .num
+      float: left
+      text-align: center
+      font-size: 36px
+      font-weight: bold
+      padding: 5px
+      color: #262626
+
+      .sign
+        font-size: 10px
+        font-weight: normal
+        color: #b3b3b3
+
+      span
+        padding: 0px
+        margin: 0px
+        width: 3px
+
+
+    .colon
+      float: left
+      text-align: center
+      font-size: 30px
+      height: 30px
+      line-height: 45px
+      font-weight: bold
+      color: #b3b3b3
+
+
+
+
