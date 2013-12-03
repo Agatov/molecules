@@ -8,17 +8,10 @@ $ ->
     name = perfume_parent.find('.name').text()
     price = perfume_parent.find('.price').text()
 
-
-
-
     show_card({img: img, name: name, price: price})
-
 
   $('.card-overlay').bind 'click', ->
     hide_card()
-
-
-
 
 window.show_card = (data) ->
 
@@ -32,5 +25,6 @@ window.hide_card = ->
 
 window.fill_card = (data) ->
   $('#card-header').text(data['name'])
+  $('#card-name').attr('perfume_name', data['name'])
   $('#card-image').attr('src', data['img'])
   $('#card-price').text(data['price'])

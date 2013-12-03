@@ -41,21 +41,22 @@ class Application < Sinatra::Base
 
     phones = %w(79037928959)
 
-    message = "#{params[:order][:username]}. #{params[:order][:phone]}. #{params[:order][:email]}"
+    #message = "#{params[:order][:username]}. #{params[:order][:phone]}. #{params[:order][:email]}"
+    message = "#{params[:order][:phone]}. #{params[:order][:name]}"
 
-    phones.each do |phone|
-      HTTParty.get(
-          'http://api.sms24x7.ru',
-          query: {
-              method: 'push_msg',
-              email: 'agatovs@gmail.com',
-              password: 'avv6rqE',
-              phone: phone.to_s,
-              text: message,
-              sender_name: '+79689124622'
-          }
-      )
-    end
+    #phones.each do |phone|
+    #  HTTParty.get(
+    #      'http://api.sms24x7.ru',
+    #      query: {
+    #          method: 'push_msg',
+    #          email: 'agatovs@gmail.com',
+    #          password: 'avv6rqE',
+    #          phone: phone.to_s,
+    #          text: message,
+    #          sender_name: '+79689124622'
+    #      }
+    #  )
+    #end
 
     Pony.mail ({
         to: 'montalemsk@gmail.com, abardacha@gmail.com, kostyadt@gmail.com',

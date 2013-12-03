@@ -12,28 +12,32 @@ $ ->
     false
 
   $('.send-order').bind 'click', ->
-    name = $(@).parent().find('input[name=username]')
-    if name.val().length < 2
-      name.css 'border', '1px solid red'
-      return false
+#    name = $(@).parent().find('input[name=username]')
+#    if name.val().length < 2
+#      name.css 'border', '1px solid red'
+#      return false
 
     phone = $(@).parent().find('input[name=phone]')
     if phone.val().length < 7
       phone.css 'border', '1px solid red'
       return false
 
-    email = $(@).parent().find('input[name=email]')
-    if email.val().length < 7
-      email.css 'border', '1px solid red'
-      return false
+#    email = $(@).parent().find('input[name=email]')
+#    if email.val().length < 7
+#      email.css 'border', '1px solid red'
+#      return false
 
-    $.post '/orders.json', {'order[username]': name.val(), 'order[phone]': phone.val(), 'order[email]': email.val()}, (data) =>
+    $.post '/orders.json', {'order[name]': $('#card-name').attr('perfume_name'), 'order[phone]': phone.val()}, (data) =>
+
     $('.modal-overlay').unbind 'click'
     $('.modal-overlay').bind 'click', ->
       hide_thank_you()
 
     reachGoal 'new-order'
     reachGoal $(@).attr('goal')
+
+
+    hide_card()
 
     show_thank_you_with_overlay()
 
